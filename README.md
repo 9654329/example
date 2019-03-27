@@ -8,12 +8,12 @@
 
 #npm
 
-    cd /home/app
     npm install
 
+#DevServer
 
-nslookup jp.archive.ubuntu.com
-160.26.2.187
+    npm run start
+
 
 #参考資料
 - [Vue.js](https://jp.vuejs.org/)
