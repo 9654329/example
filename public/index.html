@@ -1,4 +1,32 @@
-<ul>
-    <li><a href ="ex1.html">ex1.html</a></li>
-    <li><a href ="ex2.html">ex2.html</a></li>
-</ul>
+<html>
+<body>
+    <div id="app">
+        <input type="text" v-model="name">
+        <button type="button" @click="send()">ボタン</button>
+        <br>
+        <br>
+        message: {{ name }}
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+<script>
+
+    new Vue({
+        el: '#app',
+        data: {
+            name: ''
+        },
+        methods: {
+            send() {
+                if (this.name.length == 0) {
+                    this.name = '入力してください';
+                } else {
+                    this.name = '入力済み';
+                }
+
+            }
+        }
+    });
+
+</script>
+</body>
+</html>
