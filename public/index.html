@@ -2,10 +2,18 @@
 <body>
     <div id="app">
         nama:<input type="text" v-model="name">
+        <br>
+        {{ name_message }}
+        <br>
+        会社名:<input type="text" v-model="company">
+        <br>
+        {{ company_message }}
+        <br>
+        電話番号:<input type="text" v-model="tel">
+        <br>
+        {{ tel_message }}
+        <br>
         <button type="button" @click="send()">ボタン</button>
-        <br>
-        <br>
-        message: {{ message }}
     </div>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 <script>
@@ -14,16 +22,29 @@
         el: '#app',
         data: {
             name: '',
-            message:''
+            name_message:'',
+            company:'',
+            company_message:'',
+            tel:'',
+            tel_message:''
         },
         methods: {
             send() {
                 if (this.name.length == 0) {
-                    this.message = '入力してください';
+                    this.name_message = '入力してください';
                 } else {
-                    this.message = '入力済み';
+                    this.name_message = '';
                 }
-
+                if (this.company.length == 0) {
+                    this.company_message = '入力してください';
+                } else {
+                    this.company_message = '';
+                }
+                if (this.tel.length == 0) {
+                    this.tel_message = '入力してください';
+                } else {
+                    this.tel_message = '';
+                }
             }
         }
     });
