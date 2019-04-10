@@ -30,3 +30,26 @@ var app = new Vue({
         }
     }
 });
+
+
+var color = new Vue({
+    el: '#color',
+    data: {
+        styleObject: {
+            color: 'red',
+            fontSize: '13px'
+        }
+    },
+    methods: {
+        click() {
+            if (this.styleObject.color == 'blue') {
+                this.styleObject.color = 'red';
+            } else {
+                this.styleObject.color = 'blue';
+            }
+        },
+        yellow() {
+            this.styleObject.color = 'yellow';
+        }
+    }
+});
