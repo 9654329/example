@@ -37,7 +37,7 @@ var color = new Vue({
     data: {
         styleObject: {
             color: 'red',
-            fontSize: '13px'
+            fontSize: '20px'
         }
     },
     methods: {
@@ -50,6 +50,9 @@ var color = new Vue({
         },
         yellow() {
             this.styleObject.color = 'yellow';
+        },
+        gray() {
+            this.styleObject.color = 'gray';
         }
     }
 });
