@@ -1,0 +1,20 @@
+<html>
+<body>
+    <div id="app">
+        name:<input type="text" v-model="name">
+        <br>
+        {{ name_message }}
+        <br>
+        会社名:<input type="text" v-model="company">
+        <br>
+        {{ company_message }}
+        <br>
+        電話番号:<input type="text" v-model="tel">
+        <br>
+        {{ tel_message }}
+        <br>
+        <button type="button" @click="send()">ボタン</button>
+    </div>
+<script src="./js/app.js"></script>
+</body>
+</html>

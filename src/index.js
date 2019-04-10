@@ -1,21 +1,32 @@
-console.log('Hello, World!')
+import Vue from 'vue';
 
-var vue_example = new Vue({
-  el: '#vue_example',
-
-  template: `<div>
-    <p>{{ message }}</p>
-    <input v-model="message" />
-    <button v-on:click="reverse()">Reverse</button>
-    </div>`,
-
-  data: {
-    message: 'Hello Vue.js!',
-  },
-
-  methods: {
-    reverse: function () {
-      this.message = this.message.split('').reverse().join('')
+var app = new Vue({
+    el: '#app',
+    data: {
+        name: '',
+        name_message:'',
+        company:'',
+        company_message:'',
+        tel:'',
+        tel_message:''
     },
-  },
-})
+    methods: {
+        send() {
+            if (this.name.length == 0) {
+                this.name_message = '入力してください';
+            } else {
+                this.name_message = '';
+            }
+            if (this.company.length == 0) {
+                this.company_message = '入力してください';
+            } else {
+                this.company_message = '';
+            }
+            if (this.tel.length == 0) {
+                this.tel_message = '入力してください';
+            } else {
+                this.tel_message = '';
+            }
+        }
+    }
+});
